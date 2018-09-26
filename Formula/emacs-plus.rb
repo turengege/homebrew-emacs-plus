@@ -174,6 +174,15 @@ class EmacsPlus < Formula
     end
   end
 
+  patch do
+    url "https://github.com/emacs-mirror/emacs/compare/scratch/ns-drawing.patch"
+    sha256 "95aad40f90b3750858c700152d46d5bf5062f12c76d77dd838998c86301fdcb8"
+  end
+
+  patch do
+    url "http://emacs.1067599.n8.nabble.com/attachment/465838/0/0001-Fix-crash-on-flush-to-display-bug-32812.patch"
+  end
+  
   def install
     args = %W[
       --disable-dependency-tracking
